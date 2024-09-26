@@ -55,6 +55,8 @@ namespace F24W4IntroToLinq
                 new Employee("John", "White", 7000)
             };
 
+            Console.ForegroundColor = ConsoleColor.Green;
+
             // consoletables example
             ConsoleTable table = new ConsoleTable("First name", "Last name", "Salary");
 
@@ -64,6 +66,7 @@ namespace F24W4IntroToLinq
             table.Write(Format.MarkDown);
             Console.WriteLine("\n\n");
 
+            Console.ResetColor();
 
 
             var between4k6k = from e in employees
