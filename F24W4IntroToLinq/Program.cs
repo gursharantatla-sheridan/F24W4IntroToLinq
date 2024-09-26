@@ -1,4 +1,6 @@
-﻿namespace F24W4IntroToLinq
+﻿using ConsoleTables;
+
+namespace F24W4IntroToLinq
 {
     internal class Program
     {
@@ -52,6 +54,16 @@
                 new Employee("Sam", "Green", 4500),
                 new Employee("John", "White", 7000)
             };
+
+            // consoletables example
+            ConsoleTable table = new ConsoleTable("First name", "Last name", "Salary");
+
+            foreach (var e in employees)
+                table.AddRow(e.FirstName, e.LastName, e.Salary);
+
+            table.Write(Format.MarkDown);
+            Console.WriteLine("\n\n");
+
 
 
             var between4k6k = from e in employees
