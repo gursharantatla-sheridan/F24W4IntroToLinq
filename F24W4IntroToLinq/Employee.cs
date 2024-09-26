@@ -12,11 +12,15 @@ namespace F24W4IntroToLinq
         public string LastName { get; set; }
         public double Salary { get; set; }
 
+        public Dictionary<int, string> PhoneNumbers { get; set; }
+
         public Employee(string firstName, string lastName, double salary)
         {
             FirstName = firstName;
             LastName = lastName;
             Salary = salary;
+
+            PhoneNumbers = new Dictionary<int, string>();
         }
 
         public override string ToString()

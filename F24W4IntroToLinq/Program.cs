@@ -44,6 +44,9 @@ namespace F24W4IntroToLinq
             Console.WriteLine("\n\n\n\n");
 
 
+            
+
+
 
             List<Employee> employees = new List<Employee>()
             {
@@ -54,6 +57,18 @@ namespace F24W4IntroToLinq
                 new Employee("Sam", "Green", 4500),
                 new Employee("John", "White", 7000)
             };
+
+
+            Employee newEmp = new Employee("Tara", "Singh", 8000);
+            newEmp.PhoneNumbers.Add(1, "416555");
+            newEmp.PhoneNumbers.Add(2, "905555");
+            employees.Add(newEmp);
+
+
+
+
+
+
 
             Console.ForegroundColor = ConsoleColor.Green;
 
