@@ -32,6 +32,14 @@
             foreach (var c in startsWithB)
                 Console.WriteLine(c);
             Console.WriteLine("\n\n");
+
+            colors.Add("bLaCk");
+            colors.Add("OranGE");
+
+            // deferred execution
+            foreach (var c in startsWithB)
+                Console.WriteLine(c);
+            Console.WriteLine("\n\n");
         }
     }
 }
