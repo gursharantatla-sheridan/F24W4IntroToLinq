@@ -16,7 +16,22 @@
             Console.WriteLine("\n\n");
 
 
+            List<string> colors = new List<string>();
+            colors.Add("rEd");
+            colors.Add("brOWn");
+            colors.Add("grEEn");
+            colors.Add("PiNk");
+            colors.Add("BlUe");
 
+            var startsWithB = from c in colors
+                              let uppcaseColors = c.ToUpper()
+                              where uppcaseColors.StartsWith("B")
+                              orderby uppcaseColors
+                              select uppcaseColors;
+
+            foreach (var c in startsWithB)
+                Console.WriteLine(c);
+            Console.WriteLine("\n\n");
         }
     }
 }
