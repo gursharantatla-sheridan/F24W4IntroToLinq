@@ -70,6 +70,23 @@
             foreach (var e in sortedEmps)
                 Console.WriteLine(e);
             Console.WriteLine("\n\n");
+
+
+            var lastnames = from e in employees
+                            orderby e.LastName
+                            select e.LastName;
+
+            foreach (var e in lastnames.Distinct())
+                Console.WriteLine(e);
+            Console.WriteLine("\n\n");
+
+
+            var empNames = from e in employees
+                           select new { e.FirstName, e.LastName };
+
+            foreach (var e in empNames)
+                Console.WriteLine(e);
+            Console.WriteLine("\n\n");
         }
     }
 }
